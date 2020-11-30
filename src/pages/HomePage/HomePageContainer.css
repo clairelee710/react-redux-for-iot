@@ -1,0 +1,364 @@
+.home-container {
+    overflow: scroll;
+}
+
+.title {
+    font-size: 16px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+.mode-container {
+    padding: 5px
+}
+
+.mode-container .item {
+    border: 1px solid rgba(255, 255, 255, .3);
+    min-width: 18vw;
+    max-width: 18vw;
+    height: 18vw;
+    margin-right: 10px
+}
+
+.mode-container .item-box {
+    text-align: center
+}
+
+.mode-container .name {
+    font-size: 12px
+}
+
+.weather-container {
+    padding: 0 15px
+}
+
+.weather-container .forecast-list .icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto 10px
+}
+
+.weather-container .information-container.weather {
+    display: flex;
+    padding: 20px 0;
+}
+
+.weather-container .weather-status {
+    flex: 1;
+    text-align: center
+}
+
+.weather-container .weather-status .icon {
+    width: 20px;
+    height: 20px
+}
+
+.weather-container .weather-status.symbol {
+    text-align: center
+}
+
+.weather-container .weather-status.symbol .icon {
+    width: 120px;
+    height: 100px;
+    margin: 15px;
+    display: block;
+    font-size: 80px;
+}
+
+.weather-container .weather-status p {
+    font-size: 16px;
+    margin: 12px;
+    display: block
+}
+
+@media only screen and (max-width:400px) {
+    .weather-container .weather-status text {
+        margin: 6px
+    }
+}
+
+.weather-container .weather-status .city {
+    font-size: 20px
+}
+
+.weather-container .information-container.forecast {
+    display: flex
+}
+
+.weather-container .information-container.forecast .weather-icon {
+    font-size: 26px;
+    padding: 10px 0;
+    display: block
+}
+
+@media only screen and (max-width:400px) {
+    .weather-container .information-container.forecast .weather-icon {
+        font-size: 22px
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .weather-container .information-container.forecast .flexbox-items-wrapper {
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .weather-container .information-container.forecast .item {
+        padding: 0
+    }
+}
+
+.weather-list {
+    padding: 15px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+.iaq-container {
+    padding: 15px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+.iaq-container .icon {
+    font-size: 26px;
+    padding: 10px;
+    display: block;
+}
+
+.iaq-container .icon-celsius {
+    width: 20px;
+    height: 20px
+}
+
+.flexbox-items-wrapper {
+    margin: 10px 0;
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding-bottom: 10px
+}
+
+.energy-container {
+    padding: 0 15px
+}
+
+.energy-container .icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto
+}
+
+.energy-container .name {
+    display: block;
+}
+
+.flexbox-items-wrapper .item {
+    flex: 1;
+    padding: 8px;
+    border-radius: 15px;
+    text-align: center
+}
+
+.fixed-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.fixed-bar.top {
+    top: 0;
+    height: 50px;
+    box-shadow: 0 4px 20px rgba(64, 64, 64, .5)
+}
+
+.fixed-bar.bottom {
+    bottom: 0;
+    height: 60px;
+    box-shadow: 0 -4px 20px rgba(64, 64, 64, .5)
+}
+
+.chartjs-render-monitor {
+    padding: 10px;
+}
+
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    60% {
+        transform: rotate(60deg);
+    }
+
+    80% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.rotating {
+    animation: rotating 20s linear infinite;
+}
+
+.control-item {
+    padding: 8px 0;
+}
+
+.control-item .name {
+    text-align: left;
+    color: #dedede;
+    padding: 5px;
+}
+
+.control-item .btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    flex: 1;
+    background-color: transparent;
+    margin-right: 5px;
+    border: none;
+    color: #d4d4d4;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.control-item .btn.active {
+    border: 1px solid #fff;
+    color: #00bcd4;
+}
+
+.control-item.temp .controller,
+.control-item.percentage .controller {
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+}
+
+.control-item.temp .btn .icon-plus,
+.control-item.temp .btn .icon-minus,
+.control-item.percentage .btn {
+    font-size: 26px;
+    padding: 0 10px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.control-item.temp .temp-now {
+    font-size: 26px;
+}
+.control-item.temp .range-value,
+.control-item.percentage .range-value {
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 15px 0;
+    background-color: transparent;
+}
+
+.control-item.temp .range-input,
+.control-item.percentage .range-input {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 20px 15px;
+    height: 0.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+.control-item.temp ::-moz-range-track,
+.control-item.percentage ::-moz-range-track {
+    background: transparent;
+    border: 0;
+}
+
+.control-item.temp .range-input::-webkit-slider-thumb,
+.control-item.percentage .range-input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s;
+}
+
+.control-item.temp .range-input::-moz-range-thumb,
+.control-item.percentage .range-input::-moz-range-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s;
+}
+
+.control-item.temp .range-input::-ms-thumb,
+.control-item.percentage .range-input::-ms-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s;
+}
+
+.control-item.temp .range-input::-webkit-slider-thumb,
+.control-item.percentage .range-input::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.control-item.temp .range-input::-moz-range-thumb,
+.control-item.percentage .range-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.control-item.temp .range-input::-ms-thumb,
+.control-item.percentage .range-input::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.control-item.temp .range-input::-webkit-slider-thumb,
+.control-item.percentage .range-input::-webkit-slider-thumb {
+    background-color: #00bcd6;
+}
+
+.control-item.temp .range-input::-webkit-slider-thumb:hover,
+.control-item.percentage .range-input::-webkit-slider-thumb:hover {
+    background-color: #00bcd6;
+}
+
+.control-item.temp .range-input::-moz-range-thumb,
+.control-item.percentage .range-input::-moz-range-thumb {
+    background-color: #00bcd6;
+}
+
+.control-item.temp .range-input::-moz-range-thumb:hover,
+.control-item.percentage .range-input::-moz-range-thumb:hover {
+    background-color: #00bcd6;
+}
+
+.control-item.temp .range-input::-ms-thumb,
+.control-item.percentage .range-input::-ms-thumb {
+    background-color: #00bcd6;
+}
+
+.control-item.temp .range-input::-ms-thumb:hover,
+.control-item.percentage .range-input::-ms-thumb:hover {
+    background-color: #00bcd6;
+}
