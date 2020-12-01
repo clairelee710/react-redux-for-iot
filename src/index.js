@@ -5,7 +5,7 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { Provider } from 'react-redux'
 import store from './store'
-import { fetchAllData } from './Data'
+import { fetchAllData } from './TestData'
 
 store.dispatch(fetchAllData)
 

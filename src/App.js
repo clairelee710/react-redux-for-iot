@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo-white.png';
+import logo from './images/logo.png';
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement, switchLoading } from './actions'
 import { Menu } from './components/Menu';
