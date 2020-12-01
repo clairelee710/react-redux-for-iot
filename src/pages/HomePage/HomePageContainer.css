@@ -234,16 +234,14 @@
     color: #00bcd4;
 }
 
-.control-item.temp .controller,
-.control-item.percentage .controller {
+.control-item.temp .controller {
     overflow: hidden;
     display: flex;
     text-align: center;
 }
 
 .control-item.temp .btn .icon-plus,
-.control-item.temp .btn .icon-minus,
-.control-item.percentage .btn {
+.control-item.temp .btn .icon-minus {
     font-size: 26px;
     padding: 0 10px;
     vertical-align: -webkit-baseline-middle;
@@ -252,8 +250,8 @@
 .control-item.temp .temp-now {
     font-size: 26px;
 }
-.control-item.temp .range-value,
-.control-item.percentage .range-value {
+
+.control-item.temp .range-value {
     text-align: center;
     display: inline-block;
     border-radius: 3px;
@@ -261,8 +259,7 @@
     background-color: transparent;
 }
 
-.control-item.temp .range-input,
-.control-item.percentage .range-input {
+.control-item.temp .range-input {
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.35);
     margin: 20px 15px;
@@ -273,14 +270,12 @@
     outline: none;
 }
 
-.control-item.temp ::-moz-range-track,
-.control-item.percentage ::-moz-range-track {
+.control-item.temp ::-moz-range-track {
     background: transparent;
     border: 0;
 }
 
-.control-item.temp .range-input::-webkit-slider-thumb,
-.control-item.percentage .range-input::-webkit-slider-thumb {
+.control-item.temp .range-input::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -290,8 +285,7 @@
     transition: background-color 0.3s;
 }
 
-.control-item.temp .range-input::-moz-range-thumb,
-.control-item.percentage .range-input::-moz-range-thumb {
+.control-item.temp .range-input::-moz-range-thumb {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -301,8 +295,7 @@
     transition: background-color 0.3s;
 }
 
-.control-item.temp .range-input::-ms-thumb,
-.control-item.percentage .range-input::-ms-thumb {
+.control-item.temp .range-input::-ms-thumb {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -312,53 +305,59 @@
     transition: background-color 0.3s;
 }
 
-.control-item.temp .range-input::-webkit-slider-thumb,
-.control-item.percentage .range-input::-webkit-slider-thumb {
+.control-item.temp .range-input::-webkit-slider-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
-.control-item.temp .range-input::-moz-range-thumb,
-.control-item.percentage .range-input::-moz-range-thumb {
+.control-item.temp .range-input::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
-.control-item.temp .range-input::-ms-thumb,
-.control-item.percentage .range-input::-ms-thumb {
+.control-item.temp .range-input::-ms-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
-.control-item.temp .range-input::-webkit-slider-thumb,
-.control-item.percentage .range-input::-webkit-slider-thumb {
+.control-item.temp .range-input::-webkit-slider-thumb {
     background-color: #00bcd6;
 }
 
-.control-item.temp .range-input::-webkit-slider-thumb:hover,
-.control-item.percentage .range-input::-webkit-slider-thumb:hover {
+.control-item.temp .range-input::-webkit-slider-thumb:hover {
     background-color: #00bcd6;
 }
 
-.control-item.temp .range-input::-moz-range-thumb,
-.control-item.percentage .range-input::-moz-range-thumb {
+.control-item.temp .range-input::-moz-range-thumb {
     background-color: #00bcd6;
 }
 
-.control-item.temp .range-input::-moz-range-thumb:hover,
-.control-item.percentage .range-input::-moz-range-thumb:hover {
+.control-item.temp .range-input::-moz-range-thumb:hover {
     background-color: #00bcd6;
 }
 
-.control-item.temp .range-input::-ms-thumb,
-.control-item.percentage .range-input::-ms-thumb {
+.control-item.temp .range-input::-ms-thumb {
     background-color: #00bcd6;
 }
 
-.control-item.temp .range-input::-ms-thumb:hover,
-.control-item.percentage .range-input::-ms-thumb:hover {
+.control-item.temp .range-input::-ms-thumb:hover {
     background-color: #00bcd6;
+}
+
+
+.home-container .mode-list {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    margin: 15px;
+}
+
+.home-container .mode-list h3 {
+    padding-bottom: 3px;
+}
+
+.home-container section {
+    height: 100%;
+    position: relative;
 }

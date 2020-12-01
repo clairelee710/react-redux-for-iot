@@ -12,7 +12,7 @@ export const RoomsContainer = () => {
     );
     return (
         <section className="rooms-container">
-            <Carousel className="carousel slide rooms-slider" showStatus={false}>
+            <Carousel className="carousel slide rooms-slider" showStatus={false} showThumbs={false}>
                 {listItems}
             </Carousel>
         </section>

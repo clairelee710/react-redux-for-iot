@@ -6,32 +6,28 @@ import './SettingsPageContainer.css';
 export const SettingsContainer = () => {
     const settingsData = useSelector(state => state.settingsData)
     const listItems = settingsData.map((item, index) =>
-        <SettingsListItem key={index}  
-                        settingsData={settingsData}
-                        item={item}/>
+        <SettingsListItem key={index} item={item}/>
     );
     return (
         <section className="settings-container">
-            <Carousel className="main-slider" showArrows={false} showStatus={false}>
+            <Carousel className="main-slider" showThumbs={false} showStatus={false}>
                 {listItems}
             </Carousel>
         </section>
     );
 }
 
-function SettingsListItem({ settingsData, item, setSettingsData }) {
+function SettingsListItem({ item }) {
     return (
         <div className="carousel-item active">
             <h1>{item.name}</h1>
             <i className={`icon ${item.icon}`}></i>     
             <p className="description">{item.description}</p>
             <div className="toolbar">
-                {item.tools.map(tool => (
+                {item.tools.map((tool, index) => (
                     <ToolsBtn
-                        settingsData={settingsData}
-                        item={item}
+                        key={index}  
                         tool={tool}
-                        setSettingsData={setSettingsData}
                     />
                 ))}
             </div>
@@ -39,9 +35,9 @@ function SettingsListItem({ settingsData, item, setSettingsData }) {
     );
 }
 
-const ToolsBtn = ({ settingsData, item, tool, setSettingsData }) => (
+const ToolsBtn = ({ tool }) => (
     <button className="btn btn-basic">
-        <span onclick={() => setSettingsData.showSettingPopup({settingsData, item, tool})}>
+        <span>
             {tool.name}
         </span>
     </button>
