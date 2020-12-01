@@ -715,6 +715,8 @@ export async function fetchAllData(dispatch, getState) {
     dispatch({ type: 'INIT_MENUS', payload: MenuData })
     dispatch({ type: 'INIT_HOME_PAGE', payload: HomeFullData })
     dispatch({ type: 'INIT_MODES_LIST', payload: ModesFullData })
+    dispatch({ type: 'INIT_ROOMS_LIST', payload: RoomsFullData })
+    dispatch({ type: 'INIT_SETTINGS_LIST', payload: SettingsFullData })
 
     // const stateAfter = getState()
     // console.log('Todos after dispatch: ', stateAfter.todos)

@@ -3,9 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { switchPage } from '../actions'
 
 const MenuListItem = ({ index, item }) => {
-    console.log("MenuListItem");
-    console.log(item);
-    const currentPage = useSelector(state => state.currentPage) //find data from store.js by key
+
+    const currentPage = useSelector(state => state.currentPage)
     const dispatch = useDispatch()
 
     return (

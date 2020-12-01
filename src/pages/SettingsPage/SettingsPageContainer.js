@@ -1,56 +1,48 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './SettingsPageContainer.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { useSelector } from 'react-redux'
 import { Carousel } from 'react-responsive-carousel';
+import './SettingsPageContainer.css';
 
-export const SettingsContainer = ({ settingsData, setSettingsData }) => (
-    <section className="setting-container">
-        <SettingsInfoCarousel settingsData={settingsData} />
-    </section>
-);
-
-function SettingsInfoCarousel({settingsData, setSettingsData}) {
-    console.log("SettingsInfoCarousel settingsData");
-    const settingsInfo = settingsData;
-    console.log(settingsInfo);
-    const listItems = settingsInfo.map((props, index) =>
+export const SettingsContainer = () => {
+    const settingsData = useSelector(state => state.settingsData)
+    const listItems = settingsData.map((item, index) =>
         <SettingsListItem key={index}  
                         settingsData={settingsData}
-                        props={props}
-                        setSettingsData={setSettingsData}/>
+                        item={item}/>
     );
     return (
-        <Carousel className="main-slider" showArrows={false} showStatus={false}>
-            {listItems}
-        </Carousel>
+        <section className="settings-container">
+            <Carousel className="main-slider" showArrows={false} showStatus={false}>
+                {listItems}
+            </Carousel>
+        </section>
     );
 }
 
-function SettingsListItem({ settingsData, props, setSettingsData }) {
+function SettingsListItem({ settingsData, item, setSettingsData }) {
     return (
-        <li className="carousel-item active">
-            <h1>{props.name}</h1>
-            <i className={`icon ${props.icon}`}></i>     
-            <p className="description">{props.description}</p>
+        <div className="carousel-item active">
+            <h1>{item.name}</h1>
+            <i className={`icon ${item.icon}`}></i>     
+            <p className="description">{item.description}</p>
             <div className="toolbar">
-                {props.tools.map(tool => (
+                {item.tools.map(tool => (
                     <ToolsBtn
                         settingsData={settingsData}
-                        props={props}
+                        item={item}
                         tool={tool}
                         setSettingsData={setSettingsData}
                     />
                 ))}
             </div>
-        </li>
+        </div>
     );
 }
 
-const ToolsBtn = ({ settingsData, props, tool, setSettingsData }) => (
+const ToolsBtn = ({ settingsData, item, tool, setSettingsData }) => (
     <button className="btn btn-basic">
-            <span onclick={() => setSettingsData.showSettingPopup({settingsData, props, tool})}>
-                {tool.name}
-            </span>
+        <span onclick={() => setSettingsData.showSettingPopup({settingsData, item, tool})}>
+            {tool.name}
+        </span>
     </button>
 );
